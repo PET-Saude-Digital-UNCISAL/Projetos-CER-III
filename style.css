@@ -66,6 +66,8 @@ h1 {
     text-align: center;
     transition: all 0.15s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .link-item:hover {
@@ -116,8 +118,9 @@ h1 {
     }
     
     .link-item {
-        padding: 14px;
+        padding: 16px;
         font-size: 14px;
+        min-height: 48px;
     }
     
     .logo {
