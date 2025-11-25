@@ -18,7 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Eventos de clique nos links
     links.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
+            // Só previne o comportamento padrão se for um link desabilitado
+            if (link.classList.contains('disabled')) {
+                e.preventDefault();
+                return;
+            }
             
             // Remove seleção anterior
             selectedLink?.classList.remove('selected');
@@ -27,11 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('selected');
             selectedLink = link;
             
-            // Remove seleção após 1 segundo
+            // Remove seleção após um tempo curto (apenas efeito visual)
             setTimeout(() => {
                 link.classList.remove('selected');
                 selectedLink = null;
-            }, 1000);
+            }, 200);
         });
     });
     
