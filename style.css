@@ -48,6 +48,16 @@ h1 {
     margin-bottom: 5px;
 }
 
+.projects-title {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
+}
+
 .links {
     display: grid;
     gap: 12px;
@@ -115,6 +125,11 @@ h1 {
     h1 {
         font-size: 19px;
         letter-spacing: 0.3px;
+    }
+    
+    .projects-title {
+        font-size: 16px;
+        margin-bottom: 15px;
     }
     
     .link-item {
