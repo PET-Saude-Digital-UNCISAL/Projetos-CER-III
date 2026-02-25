@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #28a745;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #28a745;
+}
+
+/* Hero Section */
+.hero {
+    padding: 120px 20px 60px;
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.22) 0%, rgba(0, 123, 255, 0.22) 100%), #f5f5f5;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.hero-carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.carousel-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.logos img {
+    height: 80px;
+    object-fit: contain;
+}
+
+/* Purpose Section */
+.purpose {
+    padding: 80px 20px;
+    background: #fff;
+}
+
+.purpose h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #28a745;
+}
+
+.purpose p {
+    font-size: 1.1rem;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    color: #555;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Projects Section */
+.projects {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(0, 123, 255, 0.1) 100%);
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #28a745;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(40, 167, 69, 0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-color: rgba(40, 167, 69, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 1rem 1.5rem 0.5rem;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.project-card p {
+    padding: 0 1.5rem 1rem;
+    color: #666;
+}
+
+.btn-project {
+    margin: 0 1.5rem 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: calc(100% - 3rem);
+}
+
+.btn-project:hover {
+    background: #218838;
+}
+
+/* Team Section */
+.team {
+    padding: 80px 20px;
+    background: #fff;
+}
+
+.team h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #28a745;
+}
+
+.team-category {
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    color: #28a745;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.team-list {
+    list-style: none;
+    padding: 0;
+}
+
+.team-list li {
+    padding: 0.8rem 1.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.05) 0%, rgba(0, 123, 255, 0.05) 100%);
+    border-left: 4px solid #28a745;
+    border-radius: 5px;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.team-list li:hover {
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.1) 0%, rgba(0, 123, 255, 0.1) 100%);
+    transform: translateX(5px);
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer p {
+    font-size: 12px;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: #fff;
+    margin: 15% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.btn-confirm {
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-confirm:hover {
+    background: #218838;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0.8rem 15px;
+    }
+
+    .nav-logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-menu {
+        gap: 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        padding: 100px 15px 40px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .carousel-container {
+        height: 250px;
+    }
+
+    .logos {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .logos img {
+        height: 50px;
+    }
+
+    .purpose {
+        padding: 60px 15px;
+    }
+
+    .purpose h2,
+    .projects h2,
+    .team h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .purpose p {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .projects {
+        padding: 60px 15px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .team {
+        padding: 60px 15px;
+    }
+
+    .team-category {
+        margin-bottom: 2rem;
+    }
+
+    .category-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .team-list li {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        padding: 1.5rem 15px;
+    }
+
+    .footer p {
+        font-size: 11px;
+    }
+
+    .modal-content {
+        margin: 30% auto;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-logo {
+        font-size: 1rem;
+    }
+
+    .nav-menu {
+        gap: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-container {
+        height: 200px;
+    }
+
+    .purpose h2,
+    .projects h2,
+    .team h2 {
+        font-size: 1.6rem;
+    }
+
+    .category-title {
+        font-size: 1.3rem;
+    }
+
+    .team-list li {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.8rem;
+    }
+}
