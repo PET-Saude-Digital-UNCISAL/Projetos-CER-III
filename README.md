@@ -1,4 +1,4 @@
-# PET SAÚDE DIGITAL - CER III
+# PET SAÚDE DIGITAL - HEPR
 
 Página de links para projetos desenvolvidos no Programa de Educação pelo Trabalho para a Saúde (PET-Saúde): Informação e Saúde Digital.
 
